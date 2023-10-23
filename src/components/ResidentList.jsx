@@ -25,7 +25,7 @@ const ResidentList = ({ residents }) => {
                     <li key={page}> 
                         <button
                          className={`bg-white text-black p-2 ${
-                         page == currentPage && "bg-green-300"
+                         page == currentPage && "bg-green-400"
                         }`}
                          onClick={() => setCurrentPage(page)}
                          >
