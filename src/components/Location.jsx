@@ -15,18 +15,25 @@ const Location = ({ location, setLocation }) => {
 
     return (
       <section> 
-      <form onSubmit={handleSubmit} className="flex">
-        <input name="idLocation" className="text-black" type="number" />
+        <div>
+        <img src="/imah.png" className="max-w-[900px] mx-auto block w-full" alt="" />
+      </div>
+
+      <form onSubmit={handleSubmit} className="flex justify-center border-green-600 border-4 max-w-[500px] mx-auto">
+        <input placeholder="Type to search ..."
+          name="idLocation"
+          className="text-black text-center flex-1"
+          type="number"/>
         <button type="submit" className="flex gap-2 items-center">
             Search <IconSearch size={18}/>
              </button>
       </form>
 
         {/* Location Info */}
-        <section>
-        <h3>{location?.name}</h3>
+        <section className="border-green-600 border-2 p-3 max-w-[900px] mx-auto mt-10">
+        <h3 className="flex justify-center font-[poppins] max-w-[900px] mx-auto text-green-500 pb-4"><span>! Welcome to</span>{location?.name} ¡</h3>
 
-        <ul>
+        <ul className="flex justify-center items-center gap-10 text-slate-400 font-[poppins] mt-1">
             <li>Type:{location?.type}</li>
             <li>Dimension: {location?.dimension}</li>
             <li>Population: {location?.residents.length}</li>

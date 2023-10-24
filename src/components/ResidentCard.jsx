@@ -13,9 +13,10 @@ const ResidentCard = ({ residentEndpoint }) => {
 }, [])
 
     return (
+
     <article>
         <header className="relative">
-            <img src={resident?.image} alt="" />
+            <img className="border-green-600 border-2" src={resident?.image} alt="" />
 
             {/* Status*/}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/80 text-white px-4 py-1 rounded-md flex items-center gap-2">
@@ -30,9 +31,9 @@ const ResidentCard = ({ residentEndpoint }) => {
         <div>
             <h4>{resident?.name}</h4>
             <ul>
-                <li><span>Species</span> {resident?.species}</li>
-                <li><span>Origin </span> {resident?.origin.name}</li>
-                <li><span>Times appear</span> {resident?.episode.length}</li>
+                <li className="flex gap-2"><span className="text-slate-400 font-[poppins]">Species</span> {resident?.species}</li>
+                <li className="flex gap-2"><span className="text-slate-400 font-[poppins]">Origin </span> {resident?.origin.name}</li>
+                <li className="flex gap-2"><span className="text-slate-400 font-[poppins]">Times appear</span> {resident?.episode.length}</li>
             </ul>
         </div>
     </article>
