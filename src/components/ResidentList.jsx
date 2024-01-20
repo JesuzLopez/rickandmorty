@@ -20,12 +20,12 @@ const ResidentList = ({ residents }) => {
         </section>
 
         {/* Paginacion */}
-        <ul className="text-lg flex gap-3 justify-center flex-wrap">
+        <ul className="text-lg flex gap-3 justify-center flex-wrap  ">
             {pages.map((page) => (
                     <li key={page}> 
                         <button
                          className={`bg-white text-black p-2 ${
-                         page == currentPage && "bg-slate-800"
+                         page == currentPage && "bg-slate-400"
                         }`}
                          onClick={() => setCurrentPage(page)}
                          >
